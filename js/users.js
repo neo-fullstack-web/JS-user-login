@@ -8,9 +8,10 @@ const adminUser = {
 
 const usersOriginal = JSON.parse(localStorage.getItem('users')) || [];
 
+console.log(usersOriginal)
 if(usersOriginal.length === 0) {
     usersOriginal.push(adminUser);
-    localStorage.setItem('users', JSON.stringify(adminUser))
+    localStorage.setItem('users', JSON.stringify(usersOriginal))
 }
 
 const users = [
@@ -82,7 +83,7 @@ const user = users.find((usr) => {
 });
 
 if(user.active === false) {
-    
+
 }
 
 if(user === undefined) {
