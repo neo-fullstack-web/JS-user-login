@@ -23,18 +23,30 @@
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
               <input
+                value="johndoe@gmail.com"
                 type="email"
                 class="form-control"
+                name="email"
                 id="email"
                 placeholder="name@example.com"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                minlength="8" maxlength="40" required
               />
             </div>
             <div class="mb-3">
               <label for="password" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="password" />
+              <input 
+                value="alfabeta"	
+                type="password" 
+                class="form-control"
+                name="password"
+                id="password" 
+                minlength="4" 
+                maxlength="50" 
+                required/>
             </div>
             <div class="mb-3">
-              <button type="submit" class="btn btn-secondary">Ingresar</button>
+              <button type="submit" class="btn btn-secondary" id="submit-button">Ingresar</button>
             </div>
           </form>
         </div>
@@ -46,6 +58,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="/js/users.js"></script>
   </body>
 </html>
